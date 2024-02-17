@@ -1,5 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/SqkZA8g-)
 # CECS 326 Reading Assignment: Introduction to Operating Systems
+## Ivan Hernandez 010757940
 
 ### Assignment Description
 Answer the following questions from the Chapter 1 reading from your text- book. Be through and complete with your answers. You may work on these questions with one or two other partners, but *all* students must submit the document individually in their own repositories along with each student's name documented with the submission.
@@ -23,6 +24,7 @@ Answer the following questions from the Chapter 1 reading from your text- book. 
      
 
 3. The family-of-computers idea was introduced in the 1960s with the IBM System/360 mainframes. Is this idea now dead as a doornail or does it live on?
+The idea of a single family of compatible computers that all run on the same architecture and instruction set is still alive and kicking as seen in the growth of personal computers and smartphones. Huge examples in the personal computer space are Windows and MacOS. Windows is based on the x86 architecture which allows software made for Windows XP to still run on an Windows 11 computer no matter the price or performance. The same can be said the iPhone and Macs, both share the ARM architecture which allows apps built for the iPhone to be able to run on any Apple silicon Macs or iPad tablets with no issues.
 
 4. What is the difference between kernel and user mode? Explain how having two distinct modes aids in designing an operating system.
 
