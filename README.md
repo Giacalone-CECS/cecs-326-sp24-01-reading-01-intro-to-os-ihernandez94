@@ -7,9 +7,20 @@ Answer the following questions from the Chapter 1 reading from your text- book. 
 1. What are the two main functions of an operating system?
     An **operating system** is a layer of software that sits above the hardware and that runs in kernel mode.
     **Kernel mode** is what allows the OS complete access to all of the hardware and execute any instructions that hardware can execute. 
-    The two main functions of an operating system are to be an **extended machine** and to be *resource manager**.
+
+    The two main functions of an operating system are to be an **extended machine** and to be **resource manager**.
+    By extended machine, I mean that an operating system provide application programs with good abstractions that can create and manage a clean abstract set of resources without having to deal with the architecure of the hardware. This in turns allows the users to deal with these abstractions with a **user interface**, such as command-line shell or a GUI. This is the top-down view of the complex system. Examples include: *disk drivers* for I/O devices and *files*. 
+
+    The operating system is also a resource manager, which means it provides an orderly and controlled allocation of hardware resouces such as: processors, memories, and I/O devices. This is also seen as the bottom-up view of the complex system. This view shows that the operating system is in charge of tracking program resources and handling any conflict requests through **multiplexing**. The multiplexing of hardware resources is either done through: space or time. Examples include: *print queues* and *allocating disk space*.
     
 2. What is the difference between timesharing and multiprogramming systems?
+    With the popularization of the IBM 360, came the introduction of **multiprogramming** systems, and then **timesharing**. 
+    
+    Multiprogramming is the concept to have multiple jobs including the operating system inside memory partitions. This would allow jobs to rotate from waiting on I/O to using the CPU. This was done through jumping with a program counter that would loop forever. This was achievable with the concept of spooling, loading new jobs from cards on the disk into any empty memory partitions.
+
+    As multiprogramming became ubiquitous, there was an issue with slow response times. So programmers turned to timesharing, a variant of multiprogramming. Timesharing is the concept of allocating the CPU among different tasks that need service by users taking turns using online terminals. This allowed fast service to a number of users, while big batch jobs could be worked in the background while the CPU is idle. The operating system is in charge of what programs next and for how long. Timesharing didn't become popular until necessary protection hardware was mainstream. 
+
+     
 
 3. The family-of-computers idea was introduced in the 1960s with the IBM System/360 mainframes. Is this idea now dead as a doornail or does it live on?
 
