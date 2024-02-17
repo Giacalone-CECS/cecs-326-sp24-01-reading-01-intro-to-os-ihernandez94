@@ -24,9 +24,10 @@ Answer the following questions from the Chapter 1 reading from your text- book. 
      
 
 3. The family-of-computers idea was introduced in the 1960s with the IBM System/360 mainframes. Is this idea now dead as a doornail or does it live on?
-The idea of a single family of compatible computers that all run on the same architecture and instruction set is still alive and kicking as seen in the growth of personal computers and smartphones. Huge examples in the personal computer space are Windows and MacOS. Windows is based on the x86 architecture which allows software made for Windows XP to still run on an Windows 11 computer no matter the price or performance. The same can be said the iPhone and Macs, both share the ARM architecture which allows apps built for the iPhone to be able to run on any Apple silicon Macs or iPad tablets with no issues.
+    The idea of a single family of compatible computers that all run on the same architecture and instruction set is still alive and kicking as seen in the growth of personal computers and smartphones. Huge examples in the personal computer space are Windows and MacOS. Windows is based on the x86 architecture which allows software made for Windows XP to still run on an Windows 11 computer no matter the price or performance. The same can be said the iPhone and Macs, both share the ARM architecture which allows apps built for the iPhone to be able to run on any Apple silicon Macs or iPad tablets with no issues.
 
 4. What is the difference between kernel and user mode? Explain how having two distinct modes aids in designing an operating system.
+    The difference between kernel mode and user mode is that the operating system resides in the kernel mode and the application programs and the user interface programs reside in the user mode. 
 
 5. On early computers, every byte of data read or written was handled by the CPU (i.e., there was no DMA). What implications does this have for multiprogramming?
 
