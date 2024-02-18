@@ -27,16 +27,22 @@ Answer the following questions from the Chapter 1 reading from your text- book. 
     The idea of a single family of compatible computers that all run on the same architecture and instruction set is still alive and kicking as seen in the growth of personal computers and smartphones. Huge examples in the personal computer space are Windows and MacOS. Windows is based on the x86 architecture which allows software made for Windows XP to still run on an Windows 11 computer no matter the price or performance. The same can be said the iPhone and Macs, both share the ARM architecture which allows apps built for the iPhone to be able to run on any Apple silicon Macs or iPad tablets with no issues.
 
 4. What is the difference between kernel and user mode? Explain how having two distinct modes aids in designing an operating system.
-    The difference between kernel mode and user mode is that the operating system resides in the kernel mode and the application programs and the user interface programs reside in the user mode. 
+    The difference between kernel mode and user mode is that the operating system resides in the kernel mode and the application programs and the user interface programs reside in the user mode. The user interface programs are the lowest level of user mode and they allow the user to start other programs. A key detail in the differences between both modes, that only a subset of machine instructions are available for user mode. This means that instructions that change I/O or hardware resources are off limits. For example, you can modify the browser, but you cannot mess with the clock interrupt handler. 
+    Having two different modes is important in designing an operating system, so as to not only protect the hardware from users/programs but to also provide the application programmers a cleaner and nicer way of acesssing the hardware. This abstraction creates Kernel Mode programs, such as drivers, to allow User Mode programs to work on any hardware with a lower complex knowledge.
 
 5. On early computers, every byte of data read or written was handled by the CPU (i.e., there was no DMA). What implications does this have for multiprogramming?
+    Multiprogramming was an evolution of the batch systems of old. While older computers wasted their CPU time trying to read or write the next byte of data from memory, this meant that the CPU sat on idle, which would hold up the current job. Multiprogramming was able to separate the memory and CPU so that one job could do I/O and another could keep the CPU busy.But the CPU still had to read or write every byte of date sequentially.
 
 6. There are several design goals in building an operating system, for example, resource utilization, timeliness, robustness, and so on. Give an example of two design goals that may contradict one another.
+    Two huge goals in designing and building an operating system are resource utilization and robustness. These two design goals may be able to interfere with one another. There needs to be a balance in robustness when designing an operating system, or you will have unchecked user-mode programs that will over utilize hardware resources such as memory or disks. That is why it's important that drivers are coded properly, or you will end up with an unstable system.
+
 
 7. Which of the following instructions should be allowed only in kernel mode?
     (a) Disable all interrupts.
     (b) Read the time-of-day clock.
     (c) Set the time-of-day clock. (d) Change the memory map.
+
+    Both instructions A (disable all interrupts) and D (change memory map) should only be allowed in kernel mode since they both affect the hardware. Instructions B and C are user mode since they only affect the clock for the operating system.
 
 8. Consider a system that has two CPUs, each CPU having two threads (hyperthreading). Suppose three programs, P0, P1, and P2, are started with run times of 5, 10 and 20 msec, respectively. How long will it take to complete the execution of these programs? Assume that all three programs are 100% CPU bound, do not block during execution, and do not change CPUs once assigned.
 
